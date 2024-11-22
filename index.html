@@ -36,5 +36,23 @@
     <footer>
         <p>&copy; 2024 Fruits Delight. All rights reserved.</p>
     </footer>
+    
+  <button id="viasocket-embed-open-button" onclick="openViasocket(flowId)" >Open Integrations</button>
+<!-- you can pass scriptid in openViasocket function parameters -->
+<script
+  id="viasocket-embed-main-script"
+  embedToken="8ouFHtctGGr0Pe"
+  src="https://embed.viasocket.com/prod-embedcomponent.js"
+  parentId="id of parent container in case of all available space."
+  serviceData='your encrypted string for service data'
+></script>
+<script>
+window.addEventListener('message', (event) => {
+  if (event.origin === "https://embedfrontend.viasocket.com") {
+  const receivedData = event.data;
+  }
+  });
+  </script>
+    
 </body>
 </html>
